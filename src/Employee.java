@@ -1,10 +1,10 @@
 import java.util.Objects;
 
 public class Employee {
-    private String firstName;
-    private String lastName;
-    private String title;
-    private double payRate;
+    protected String firstName;
+    protected String lastName;
+    protected String title;
+    protected double payRate;
 
     public Employee(String firstName, String lastName, String title, double payRate) {
         this.firstName = firstName;

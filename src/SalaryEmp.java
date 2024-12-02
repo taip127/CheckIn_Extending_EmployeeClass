@@ -7,6 +7,6 @@ public class SalaryEmp extends Employee {
     }
     public void display() {
         System.out.println(super.toString());
-        System.out.println("bi-monthly Salary: " + calculateSalary());
+        System.out.println("bi-monthly Salary: $" + calculateSalary());
     }
 }

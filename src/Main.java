@@ -19,13 +19,17 @@ public class Main {
         salaryEmp.display();
         hourlyEmp.display();*/
 
+        inputEmployee();
+    }
+
+    public static void inputEmployee(){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter employee type(salary/hourly): ");
         String emptype = input.nextLine().trim().toLowerCase();
 
         Employee employee;
         switch (emptype) {
-            case "salary":{
+            case "salary": {
                 System.out.print("Enter first name: ");
                 String firstname = input.nextLine();
                 System.out.print("Enter last name: ");
@@ -35,12 +39,12 @@ public class Main {
                 System.out.print("Enter annual salary: ");
                 double salary = input.nextDouble();
 
-                employee = new SalaryEmp(firstname,lastname,title,salary);
+                employee = new SalaryEmp(firstname, lastname, title, salary);
                 ((SalaryEmp) employee).display();
 
                 break;
             }
-            case "hourly":{
+            case "hourly": {
                 System.out.print("Enter first name: ");
                 String firstname = input.nextLine();
                 System.out.print("Enter last name: ");
@@ -51,14 +55,15 @@ public class Main {
                 double salary = input.nextDouble();
                 System.out.print("Enter hours worked: ");
                 double hoursWorked = input.nextDouble();
-                employee = new HourlyEmp(firstname,lastname,title,salary,hoursWorked);
+                employee = new HourlyEmp(firstname, lastname, title, salary, hoursWorked);
                 ((HourlyEmp) employee).display();
             }
-            default: System.out.println("Invalid employee type");
+            default:
+                System.out.println("Invalid employee type");
 
         }
 
 
-input.close();
+        input.close();
     }
 }
