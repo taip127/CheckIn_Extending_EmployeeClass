@@ -62,8 +62,6 @@ public class Main {
                 System.out.println("Invalid employee type");
 
         }
-
-
         input.close();
     }
 }
